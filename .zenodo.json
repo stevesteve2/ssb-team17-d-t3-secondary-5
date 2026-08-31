@@ -42,7 +42,7 @@
       "resource_type": "publication-preprint"
     },
     {
-      "identifier": "(this deposit)",
+      "identifier": "https://github.com/stevesteve2/ssb-team17-d-t3-secondary-5",
       "relation": "isCompiledBy",
       "scheme": "url",
       "resource_type": "software"
