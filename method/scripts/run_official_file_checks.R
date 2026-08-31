@@ -1,0 +1,21 @@
+#!/usr/bin/env Rscript
+suppressPackageStartupMessages({library(tidyverse); library(jsonlite); library(digest)})
+source("official_submission_template/scripts/lib/submission_spec.R")
+source("official_submission_template/scripts/lib/check_lib.R")
+res <- tibble(check=character(),status=character(),detail=character())
+add <- function(check,status,detail="") {res <<- add_row(res,check=check,status=status,detail=detail);invisible()}
+ok <- function(cond,check,bad,good="") if(isTRUE(cond)) add(check,"PASS",good) else add(check,"FAIL",bad)
+warn <- function(cond,check,bad,good="") if(isTRUE(cond)) add(check,"PASS",good) else add(check,"WARN",bad)
+rng <- function(x,lo,hi) sum(!is.na(x)&(x<lo|x>hi))
+base <- "target_generation/predictions"
+t1 <- read_csv(file.path(base,"T1_secondary_predictions.csv"),show_col_types=FALSE)
+t2m <- read_csv(file.path(base,"T2_primary_cells_main.csv"),show_col_types=FALSE)
+t2s <- read_csv(file.path(base,"T2_primary_cells_moderator.csv"),show_col_types=FALSE)
+t3 <- read_csv(file.path(base,"T3_secondary_predictions.csv"),show_col_types=FALSE)
+.check_t1(t1,"T1_secondary_predictions.csv",add,ok,warn,rng)
+.check_t2_main(t2m,"T2_primary_cells_main.csv",add,ok,warn,rng,16L,13L)
+.check_t2_mod(t2s,"T2_primary_cells_moderator.csv",add,ok,warn,rng,16L,13L)
+.check_t3(t3,"T3_secondary_predictions.csv",add,ok,warn,rng,16L,13L)
+write_csv(res,"target_generation/processed/official_file_checks.csv")
+print(res,n=Inf)
+if(any(res$status=="FAIL")) quit(status=1)

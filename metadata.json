@@ -1,0 +1,41 @@
+{
+  "team_id": "team_17",
+  "team_name": "team_17 (Rathje & Mirea)",
+  "contact": "srathje@andrew.cmu.edu",
+  "creators": [
+    {
+      "name": "Rathje, Steve",
+      "affiliation": "Carnegie Mellon University",
+      "orcid": "0000-0001-6727-571X"
+    },
+    {
+      "name": "Mirea, Dan-Mircea",
+      "affiliation": "Princeton University",
+      "orcid": "0000-0002-4349-7059"
+    }
+  ],
+  "abstract": "",
+  "license": "CC-BY-4.0",
+  "code_repository": "(this deposit)",
+  "code_doi": null,
+  "disclosure_class": "A",
+  "escrow_doi": null,
+  "zenodo_doi": null,
+  "coverage": {
+    "interventions": 16,
+    "outcomes": 13
+  },
+  "blinding_attestation": true,
+  "tier": 3,
+  "entry": "secondary-5",
+  "approach_family": "direct evidence-conditioned effect forecast, single model, k=3 ensemble, 0.5 effect calibration",
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "prediction_files": [
+    {
+      "file": "predictions/team_17_T3_secondary-5_v1.csv",
+      "sha256": "4813bc50ddb69a04f9608a1a7d97fd4b5723b3a9caa9da1649fefe32977f18c2"
+    }
+  ]
+}

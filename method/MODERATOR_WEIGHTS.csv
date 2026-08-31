@@ -1,0 +1,28 @@
+moderator,moderator_level,weight,source,field_year,notes
+gender,Male,0.4855,benchmark quota totals rescaled to reserve 1% Other,2026,external Other share is an explicit approximation
+gender,Female,0.5045,benchmark quota totals rescaled to reserve 1% Other,2026,external Other share is an explicit approximation
+gender,Other,0.0100,design assumption,2026,used only for coherence; sensitivity check at 0.5% and 2%
+age_band,18-29,0.2016111111,benchmark planned quota,2026,3629/18000
+age_band,30-44,0.2604444444,benchmark planned quota,2026,4688/18000
+age_band,45-59,0.2290000000,benchmark planned quota,2026,4122/18000
+age_band,60+,0.3089444445,benchmark planned quota,2026,5561/18000
+race,White / Caucasian,0.6017777778,benchmark planned quota,2026,10832/18000; non-Hispanic White
+race,Black / African American,0.1228888889,benchmark planned quota,2026,2212/18000
+race,Hispanic / Latino,0.1812777778,benchmark planned quota,2026,3263/18000
+race,Asian / Asian American,0.0667222222,benchmark planned quota,2026,1201/18000
+race,Other,0.0273333333,benchmark planned quota,2026,492/18000
+education,Less than high school,0.104,2024 ACS S1501,2024,less than 9th plus 9th-12th no diploma; age 25+ proxy for adult target
+education,High school diploma / GED,0.260,2024 ACS S1501,2024,
+education,Some college or Associate's degree,0.279,2024 ACS S1501,2024,some college plus associate degree
+education,Bachelor's degree,0.216,2024 ACS S1501,2024,
+education,Master's degree / Professional degree,0.122,2024 ACS S1501 plus degree-detail approximation,2024,graduate/professional total split from doctorate
+education,Doctorate degree / Ph.D.,0.019,2024 ACS S1501 plus degree-detail approximation,2024,graduate/professional total split from doctorate
+income,"Less than $30,000",0.18,2024 CPS household-income distribution approximation,2024,benchmark thresholds do not align with published percentile cuts
+income,"$30,000 to $55,999",0.18,2024 CPS household-income distribution approximation,2024,rounded prior for coherence only
+income,"$56,000 to $99,999",0.24,2024 CPS household-income distribution approximation,2024,rounded prior for coherence only
+income,"$100,000 to $167,999",0.20,2024 CPS household-income distribution approximation,2024,rounded prior for coherence only
+income,"$168,000 or more",0.20,2024 CPS household-income distribution approximation,2024,rounded prior for coherence only
+party,Republican,0.27,2025 Gallup annual identification,2025,
+party,Democrat,0.27,2025 Gallup annual identification,2025,
+party,Independent,0.45,2025 Gallup annual identification,2025,
+party,Other,0.01,rounding remainder / design assumption,2025,Gallup three-category total rounded to 99%
